@@ -55,6 +55,115 @@
     </header>
     <main>
         <h2>Application Form</h2>
+        <form action="https://script.google.com/macros/s/AKfycby11nbO8hbioOgF69B6udwoVrCvhbGtaQ8F5QbTISsl_yQAv8IAIlzlP4IIiVapUTg/exec" method="post" id="applicationForm">
+            <div>
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div>
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" required min="16" max="100">
+            </div>
+            <div>
+                <label for="birthplace">Place of Birth:</label>
+                <input type="text" id="birthplace" name="birthplace" required>
+            </div>
+            <div>
+                <label for="residence">Current Place of Residence:</label>
+                <input type="text" id="residence" name="residence" required>
+            </div>
+            <div>
+                <label for="english_level">English Language Level:</label>
+                <select id="english_level" name="english_level" required>
+                    <option value="">Select your level</option>
+                    <option value="beginner">Beginner</option>
+                    <option value="intermediate">Intermediate</option>
+                    <option value="advanced">Advanced</option>
+                    <option value="fluent">Fluent</option>
+                    <option value="native">Native</option>
+                </select>
+            </div>
+            <div>
+                <label for="app_year">Application Year:</label>
+                <select id="app_year" name="app_year" required>
+                    <option value="">Select your application year</option>
+                    <option value="2024-25">2024-25</option>
+                    <option value="2025-26">2025-26</option>
+                    <option value="2026-27">2026-27</option>
+                    <option value="After 2027">After 2027</option>
+                </select>
+            </div>
+            <div>
+                <label for="desired_program">Desired Program of Study:</label>
+                <input type="text" id="desired_program" name="desired_program" required>
+            </div>
+            <button type="submit">Submit Application</button>
+        </form>
+        
+    </main>
+</body>
+</html>
+
+
+
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply - Bridges to US Degrees</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #2207be;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+        main {
+            padding: 2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        form {
+            display: grid;
+            gap: 1rem;
+        }
+        label {
+            font-weight: bold;
+        }
+        input, select {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #0066cc;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0052a3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bridges to US Degrees - Application</h1>
+    </header>
+    <main>
+        <h2>Application Form</h2>
         <form action="#" method="post">
             <div>
                 <label for="name">Full Name:</label>
@@ -73,8 +182,8 @@
                 <input type="text" id="residence" name="residence" required>
             </div>
             <div>
-                <label for="english-level">English Language Level:</label>
-                <select id="english-level" name="english-level" required>
+                <label for="engllish_level">English Language Level:</label>
+                <select id="engllish_level" name="engllish_level" required>
                     <option value="">Select your level</option>
                     <option value="beginner">Beginner</option>
                     <option value="intermediate">Intermediate</option>
@@ -84,8 +193,8 @@
                 </select>
             </div>
             <div>
-                <label for="appYear">Application Year:</label>
-                <select id="appYear" name="appYear" required>
+                <label for="app_year">Application Year:</label>
+                <select id="app_year" name="app_year" required>
                     <option value="">Select your application year</option>
                     <option value="2024-25">2024-25</option>
                     <option value="2025-26">2025-26</option>
@@ -94,33 +203,45 @@
                 </select>
             </div>
             <div>
-                <label for="desired-program">Desired Program of Study:</label>
-                <input type="text" id="desired-program" name="desired-program" required>
+                <label for="desired_program">Desired Program of Study:</label>
+                <input type="text" id="desired_program" name="desired_program" required>
             </div>
             <button type="submit">Submit Application</button>
         </form>
         
     
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script>
-        $("#applicationForm").submit(function(event) {
-            event.preventDefault();
-            var formData = $(this).serialize();
-            $.ajax({
-            url: "https://script.google.com/macros/s/AKfycby11nbO8hbioOgF69B6udwoVrCvhbGtaQ8F5QbTISsl_yQAv8IAIlzlP4IIiVapUTg/exec",
-            method: "POST",
-            data: formData,
-            success: function(response) {
-                alert("Application submitted successfully!");
-                $("#applicationForm")[0].reset();
-            },
-            error: function(err) {
-                alert("An error occurred. Please try again later.");
-                console.log(err);
-            }
+            document.addEventListener('DOMContentLoaded', function() {
+                const form = document.getElementById('applicationForm');
+                
+                form.addEventListener('submit', function(event) {
+                    event.preventDefault();
+                    
+                    const formData = new FormData(form);
+                    const data = Object.fromEntries(formData.entries());
+                    
+                    fetch('https://script.google.com/macros/s/AKfycby11nbO8hbioOgF69B6udwoVrCvhbGtaQ8F5QbTISsl_yQAv8IAIlzlP4IIiVapUTg/exec', {
+                        method: 'POST',
+                        body: JSON.stringify(data),
+                        headers: {
+                            'Content-Type': 'application/json'
+                        }
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        alert('Application submitted successfully!');
+                        form.reset();
+                    })
+                    .catch(error => {
+                        alert('An error occurred. Please try again later.');
+                        console.error('Error:', error);
+                    });
+                });
             });
-        });
+        </script>
+    
     </script>
     </main>
 </body>
 </html>
+-->
