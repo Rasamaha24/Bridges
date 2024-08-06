@@ -1,247 +1,205 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apply - Bridges to US Degrees</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #2207be;
-            color: white;
-            text-align: center;
-            padding: 1rem;
-        }
-        main {
-            padding: 2rem;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        form {
-            display: grid;
-            gap: 1rem;
-        }
-        label {
-            font-weight: bold;
-        }
-        input, select {
-            width: 100%;
-            padding: 0.5rem;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-        button {
-            background-color: #0066cc;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #0052a3;
-        }
-    </style>
+	<link rel="stylesheet" href="applicationV2.css">
 </head>
 <body>
-    <header>
-        <h1>Bridges to US Degrees - Application</h1>
-    </header>
-    <main>
-        <h2>Application Form</h2>
-        <form action="https://script.google.com/macros/s/AKfycby11nbO8hbioOgF69B6udwoVrCvhbGtaQ8F5QbTISsl_yQAv8IAIlzlP4IIiVapUTg/exec" method="post" id="applicationForm">
-            <div>
-                <label for="name">Full Name:</label>
-                <input type="text" id="name" name="name" required>
-            </div>
-            <div>
-                <label for="age">Age:</label>
-                <input type="number" id="age" name="age" required min="16" max="100">
-            </div>
-            <div>
-                <label for="birthplace">Place of Birth:</label>
-                <input type="text" id="birthplace" name="birthplace" required>
-            </div>
-            <div>
-                <label for="residence">Current Place of Residence:</label>
-                <input type="text" id="residence" name="residence" required>
-            </div>
-            <div>
-                <label for="english_level">English Language Level:</label>
-                <select id="english_level" name="english_level" required>
-                    <option value="">Select your level</option>
-                    <option value="beginner">Beginner</option>
-                    <option value="intermediate">Intermediate</option>
-                    <option value="advanced">Advanced</option>
-                    <option value="fluent">Fluent</option>
-                    <option value="native">Native</option>
-                </select>
-            </div>
-            <div>
-                <label for="app_year">Application Year:</label>
-                <select id="app_year" name="app_year" required>
-                    <option value="">Select your application year</option>
-                    <option value="2024-25">2024-25</option>
-                    <option value="2025-26">2025-26</option>
-                    <option value="2026-27">2026-27</option>
-                    <option value="After 2027">After 2027</option>
-                </select>
-            </div>
-            <div>
-                <label for="desired_program">Desired Program of Study:</label>
-                <input type="text" id="desired_program" name="desired_program" required>
-            </div>
-            <button type="submit">Submit Application</button>
-        </form>
-        
-    </main>
+	<div class="container">
+		<form method="post" action="" name="contact-form">
+			<h4>Contact Us</h4>
+			<input type="text" name="your-name" placeholder="Name">
+			<input type="text" name="your-number" placeholder="Number">
+			<input type="email" name="your-email" placeholder="Email">
+			<textarea name="message" rows="7" placeholder="Your Message"></textarea>
+			<input type="submit" value="Submit" id="submit">
+		</form>
+	</div>
+
+	<script src="applicationV2.js"></script>
+    
 </body>
 </html>
 
+<!--<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+  </head>
+  <body>
+    <section class="hero is-primary is-bold">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title">Data Entry Form</h1>
+        </div>
+      </div>
+    </section>
+    <form id="form" class="container m-4 pl-4" method="POST">
+      <div class="field">
+        <label class="label">Your Name</label>
+        <div class="control">
+          <input
+            class="input"
+            type="text"
+            placeholder="Your Name"
+            name="name"
+          />
+        </div>
+      </div>
 
+      
 
-<!--
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apply - Bridges to US Degrees</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #2207be;
-            color: white;
-            text-align: center;
-            padding: 1rem;
-        }
-        main {
-            padding: 2rem;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        form {
-            display: grid;
-            gap: 1rem;
-        }
-        label {
-            font-weight: bold;
-        }
-        input, select {
-            width: 100%;
-            padding: 0.5rem;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-        button {
-            background-color: #0066cc;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #0052a3;
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <h1>Bridges to US Degrees - Application</h1>
-    </header>
-    <main>
-        <h2>Application Form</h2>
-        <form action="#" method="post">
-            <div>
-                <label for="name">Full Name:</label>
-                <input type="text" id="name" name="name" required>
-            </div>
-            <div>
-                <label for="age">Age:</label>
-                <input type="number" id="age" name="age" required min="16" max="100">
-            </div>
-            <div>
-                <label for="birthplace">Place of Birth:</label>
-                <input type="text" id="birthplace" name="birthplace" required>
-            </div>
-            <div>
-                <label for="residence">Current Place of Residence:</label>
-                <input type="text" id="residence" name="residence" required>
-            </div>
-            <div>
-                <label for="engllish_level">English Language Level:</label>
-                <select id="engllish_level" name="engllish_level" required>
-                    <option value="">Select your level</option>
-                    <option value="beginner">Beginner</option>
-                    <option value="intermediate">Intermediate</option>
-                    <option value="advanced">Advanced</option>
-                    <option value="fluent">Fluent</option>
-                    <option value="native">Native</option>
-                </select>
-            </div>
-            <div>
-                <label for="app_year">Application Year:</label>
-                <select id="app_year" name="app_year" required>
-                    <option value="">Select your application year</option>
-                    <option value="2024-25">2024-25</option>
-                    <option value="2025-26">2025-26</option>
-                    <option value="2026-27">2026-27</option>
-                    <option value="After 2027">After 2027</option>
-                </select>
-            </div>
-            <div>
-                <label for="desired_program">Desired Program of Study:</label>
-                <input type="text" id="desired_program" name="desired_program" required>
-            </div>
-            <button type="submit">Submit Application</button>
-        </form>
-        
+      <div class="field">
+        <label class="label">Your Age</label>
+        <div class="control">
+          <input
+            class="input"
+            type="age"
+            placeholder="Age"
+            name="age"
+          />
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">Birthplace</label>
+        <div class="control">
+          <input
+            class="input"
+            type="birthplace"
+            placeholder="birthplace"
+            name="Password"
+          />
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">Place of Residence</label>
+        <div class="control">
+          <input
+            class="input"
+            type="residence"
+            placeholder="residence"
+            name="residence"
+          />
+        </div>
+      </div>
+      <div class="field">
+        <label for="english_level">English Language Level:</label>
+        <select id="english_level" name="english_level" required>
+            <option value="">Select your level</option>
+            <option value="beginner">Beginner</option>
+            <option value="intermediate">Intermediate</option>
+            <option value="advanced">Advanced</option>
+            <option value="fluent">Fluent</option>
+            <option value="native">Native</option>
+        </select>
+      </div>
+      <div>
+        <label for="app_year">Application Year:</label>
+        <select id="app_year" name="app_year" required>
+            <option value="">Select your application year</option>
+            <option value="2024-25">2024-25</option>
+            <option value="2025-26">2025-26</option>
+            <option value="2026-27">2026-27</option>
+            <option value="After 2027">After 2027</option>
+        </select>
+      </div>
+
     
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                const form = document.getElementById('applicationForm');
-                
-                form.addEventListener('submit', function(event) {
-                    event.preventDefault();
-                    
-                    const formData = new FormData(form);
-                    const data = Object.fromEntries(formData.entries());
-                    
-                    fetch('https://script.google.com/macros/s/AKfycby11nbO8hbioOgF69B6udwoVrCvhbGtaQ8F5QbTISsl_yQAv8IAIlzlP4IIiVapUTg/exec', {
-                        method: 'POST',
-                        body: JSON.stringify(data),
-                        headers: {
-                            'Content-Type': 'application/json'
-                        }
-                    })
-                    .then(response => response.json())
-                    .then(data => {
-                        alert('Application submitted successfully!');
-                        form.reset();
-                    })
-                    .catch(error => {
-                        alert('An error occurred. Please try again later.');
-                        console.error('Error:', error);
-                    });
-                });
-            });
-        </script>
-    
+      <div>
+        <label for="desired_program">Desired Program of Study:</label>
+        <input type="text" id="desired_program" name="desired_program" required>
+      </div>
+
+      <div class="field is-grouped">
+        <div class="control">
+          <button class="button is-primary" type="submit" id="submit-button">
+            Apply
+          </button>
+        </div>
+        <div class="control">
+          <button class="button is-danger">Cancel</button>
+        </div>
+      </div>
+    </form>
+    <div
+      id="message"
+      style="
+        display: none;
+        margin: 20px;
+        font-weight: bold;
+        color: blue;
+        padding: 8px;
+        background-color: beige;
+        border-radius: 4px;
+        border-color: lightskyblue;
+      "
+    ></div>
+
+    <script>
+      document.getElementById("form").addEventListener("submit", function (e) {
+        e.preventDefault(); // Prevent the default form submission
+        document.getElementById("message").textContent = "Submitting..";
+        document.getElementById("message").style.display = "block";
+        document.getElementById("submit-button").disabled = true;
+
+        // Collect the form data
+        var formData = new FormData(this);
+        var keyValuePairs = [];
+        for (var pair of formData.entries()) {
+          keyValuePairs.push(pair[0] + "=" + pair[1]);
+        }
+
+        var formDataString = keyValuePairs.join("&");
+
+        // Send a POST request to your Google Apps Script
+        fetch(
+          "https://script.google.com/macros/s/AKfycby11nbO8hbioOgF69B6udwoVrCvhbGtaQ8F5QbTISsl_yQAv8IAIlzlP4IIiVapUTg/exec",
+          {
+            redirect: "follow",
+            method: "POST",
+            body: formDataString,
+            headers: {
+              "Content-Type": "text/plain;charset=utf-8",
+            },
+          }
+        )
+          .then(function (response) {
+            // Check if the request was successful
+            if (response) {
+              return response; // Assuming your script returns JSON response
+            } else {
+              throw new Error("Failed to submit the form.");
+            }
+          })
+          .then(function (data) {
+            // Display a success message
+            document.getElementById("message").textContent =
+              "Data submitted successfully!";
+            document.getElementById("message").style.display = "block";
+            document.getElementById("message").style.backgroundColor = "green";
+            document.getElementById("message").style.color = "beige";
+            document.getElementById("submit-button").disabled = false;
+            document.getElementById("form").reset();
+
+            setTimeout(function () {
+              document.getElementById("message").textContent = "";
+              document.getElementById("message").style.display = "none";
+            }, 2600);
+          })
+          .catch(function (error) {
+            // Handle errors, you can display an error message here
+            console.error(error);
+            document.getElementById("message").textContent =
+              "An error occurred while submitting the form.";
+            document.getElementById("message").style.display = "block";
+          });
+      });
     </script>
-    </main>
-</body>
+  </body>
 </html>
+
 -->
